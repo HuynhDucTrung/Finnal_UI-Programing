@@ -1,6 +1,5 @@
 var nameProduct, maProduct, sanPhamHienTai; // Tên sản phẩm trong trang này, 
 // là biến toàn cục để có thể dùng ở bát cứ đâu trong trang
-// không cần tính toán lấy tên từ url nhiều lần
 
 window.onload = function () {
     khoiTao();
@@ -27,7 +26,7 @@ function phanTich_URL_chiTietSanPham() {
     nameProduct = window.location.href.split('?')[1]; // lấy tên
     if(!nameProduct) return khongTimThaySanPham();
 
-    // code này làm ngược lại so với lúc tạo href cho sản phẩm trong file classes.js
+    
     nameProduct = nameProduct.split('-').join(' ');
 
     for(var p of list_products) {
